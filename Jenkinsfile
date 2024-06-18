@@ -34,6 +34,30 @@ pipeline {
                 }
             }
         }
+        stage('Backend Infrastructure') {
+            steps {
+                script {
+                    dir('./terraform/backend') {
+                        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'fe277f34-c214-41e7-9ea6-b120bc80e1dc', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+                            sh 'terraform init'
+                            sh 'terraform apply -auto-approve'
+                        }
+                    }
+                }
+            }
+        }
+        stage('Apply Infrastructure') {
+            steps {
+                script {
+                    dir('./terraform') {
+                        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'fe277f34-c214-41e7-9ea6-b120bc80e1dc', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+                            sh 'terraform init -input=false'
+                            sh 'terraform apply -auto-approve'
+                        }
+                    }
+                }
+            }
+        }
     }
     post {
         success {

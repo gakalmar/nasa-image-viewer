@@ -17,7 +17,7 @@
 
 ### Once it's deployed:
 - Update context in your WSL or other local environment:
-    - `aws eks update-kubeconfig --region eu-west-2 --nasa-potd`
+    - `aws eks update-kubeconfig --region eu-west-2 --name nasa-potd-eks-cluster`
     - Test: `kubectl get nodes`
 - Get service:
     - `kubectl get services` -> type in the browser the `EXTERNAL-IP` of the service

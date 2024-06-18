@@ -9,6 +9,7 @@
 3. **Push:** The image is then pushed to the `AWS ECR`
 4. **Backend Infrastructure:** An `S3` bucket gets created for the backend
 5. **Main Infrastructure:** The main infrastructure gets created
+6. **Deployment:** A Deployment & Load Balancer gets created in the cluster
 
 ### For local deployment:
 - Initialize `ngrok` service: `ngrok http 8080`

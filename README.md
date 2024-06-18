@@ -15,9 +15,23 @@
 5. **Main Infrastructure:**
     - The main infrastructure gets created
 
+### For local deployment:
+- Initialize `ngrok` service:
+    - `ngrok http 8080`
+
 ### Once it's deployed:
 - Update context in your WSL or other local environment:
     - `aws eks update-kubeconfig --region eu-west-2 --name nasa-potd-eks-cluster`
     - Test: `kubectl get nodes`
 - Get service:
     - `kubectl get services` -> type in the browser the `EXTERNAL-IP` of the service
+
+### Once it's deployed:
+- As the terraform infrastructure's backend is stored remotely in the backend bucket, we can destroy our infrastructure remotely:
+    - Navigate to your repository (where you cloned it), and step into the `terraform` folder
+    - Update repository to reflect latest changes:
+        - `git pull`
+    - Use these commands:
+        - `terraform init`
+        - `terraform destroy`
+    - Finally stop `ngrok` forwarding service

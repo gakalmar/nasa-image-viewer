@@ -4,7 +4,7 @@ WORKDIR /usr/src/nasa-potd
 
 COPY . .
 
-RUN ./app/backend/npm i
+RUN cd app/backend && npm install
 
 CMD [ "npm", "start"]
 

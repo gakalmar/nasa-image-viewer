@@ -1,0 +1,81 @@
+body {
+    font-family: 'Gabarito', sans-serif;
+    font-weight: 200;
+    color:rgb(255, 255, 255);
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+button {
+    color: white;
+    font-size: 2em;
+    background-color:rgba(240, 248, 255, 0.16);
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#datePicker{
+    color: white;
+    font-size: 1.1em;
+    font-family: 'Gabarito', sans-serif;
+    font-weight: 100;
+    background-color:rgba(240, 248, 255, 0.16);
+    width: auto;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#prev{
+    margin: 5px;
+}
+
+#next{
+    margin: 5px;
+}
+
+#navBar{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imageContent {
+    border-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: bottom;
+    text-align: center;
+    height: 40vh;
+}
+
+img {
+    margin-top: 15px;
+    border-radius: 40px;
+    height: 70vh;
+}
+
+p {
+    background-color: rgba(240, 248, 255, 0.10);
+    border-radius: 25px;
+    padding: 15px;
+    max-width: 80vw;
+    margin: 0 auto;
+}

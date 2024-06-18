@@ -64,7 +64,7 @@ resource "aws_subnet" "eks_subnet" {
 
   tags = {
     Name = "eks_subnet_${count.index < 2 ? "public" : "private"}_${count.index % 2}"
-    "kubernetes.io/cluster/hello-world-eks-cluster" = "owned"
+    "kubernetes.io/cluster/nasa-potd-eks-cluster" = "owned"
   }
 }
 

@@ -22,7 +22,6 @@ resource "aws_eks_node_group" "eks_nodes" {
   node_group_name = "nasa-potd-eks-node-group"
   node_role_arn   = aws_iam_role.eks_node.arn
 
-  # Use a string comparison to filter for private subnets
   subnet_ids      = [for s in aws_subnet.eks_subnet : s.id if can(regex("private", s.tags["Name"]))]
 
   instance_types  = ["t3.medium"]

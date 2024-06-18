@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "terraform-backend-bucket-hw-app-gk-240617"
+    bucket = "backend-bucket-nasa-potd-app-gk"
     key    = "state"
     region = "eu-west-2"
   }

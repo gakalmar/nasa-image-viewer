@@ -5,7 +5,7 @@
 
 ### Pipeline phases:
 1. **Build:** The app gets containerized using a `Dockerfile`
-2. **Test:** The container gets created an a simple test is applied
+2. **Test:** Fter the container gets created, some simple tests are ran on it
 3. **Push:** The image is then pushed to the `AWS ECR`
 4. **Backend Infrastructure:** An `S3` bucket gets created for the backend
 5. **Main Infrastructure:** The main infrastructure gets created
